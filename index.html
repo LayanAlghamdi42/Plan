@@ -1,401 +1,901 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خطة عمل سفير أكاديمية رُوّاد – ليان الغامدي</title>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --dark: #0d3b38;
-    --darker: #082a28;
-    --darkest: #051e1c;
-    --teal: #2ec4b6;
-    --teal-light: #4fd1c5;
-    --teal-dim: rgba(46,196,182,0.12);
-    --white: #ffffff;
-    --white-soft: rgba(255,255,255,0.85);
-    --white-muted: rgba(255,255,255,0.5);
-    --white-faint: rgba(255,255,255,0.06);
-    --card-border: rgba(46,196,182,0.2);
-  }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  html { scroll-behavior:smooth; }
-  body {
-    font-family:'Tajawal',sans-serif;
-    background:var(--darkest);
-    color:var(--white);
-    overflow-x:hidden;
-  }
- 
-  nav {
-    position:fixed; top:0; width:100%; z-index:100;
-    background:rgba(5,30,28,0.94);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid var(--card-border);
-    padding:14px 48px;
-    display:flex; align-items:center; justify-content:space-between;
-  }
-  .nav-brand { display:flex; align-items:center; gap:10px; }
-  .brand-icon { display:flex; align-items:center; gap:3px; }
-  .s1 { width:0; height:0; border-top:8px solid transparent; border-bottom:8px solid transparent; border-left:12px solid var(--teal); }
-  .s2 { width:10px; height:10px; background:var(--white); transform:rotate(45deg); }
-  .s3 { width:0; height:0; border-top:8px solid transparent; border-bottom:8px solid transparent; border-right:12px solid var(--teal); }
-  .brand-name { font-size:15px; font-weight:700; }
-  .nav-links { display:flex; gap:28px; list-style:none; }
-  .nav-links a { color:var(--white-muted); text-decoration:none; font-size:14px; transition:.3s; }
-  .nav-links a:hover { color:var(--teal); }
- 
-  .hero {
-    min-height:100vh;
-    background:radial-gradient(ellipse 80% 60% at 50% 0%, rgba(46,196,182,0.1) 0%, transparent 70%),
-               linear-gradient(180deg, var(--darker) 0%, var(--darkest) 100%);
-    display:flex; align-items:center; justify-content:center;
-    text-align:center; padding:120px 24px 80px; position:relative; overflow:hidden;
-  }
-  .hero-dots {
-    position:absolute; inset:0; pointer-events:none;
-    background-image:radial-gradient(circle, rgba(46,196,182,0.13) 1px, transparent 1px);
-    background-size:40px 40px;
-    mask-image:radial-gradient(ellipse 70% 55% at 50% 0%, black, transparent);
-  }
-  .hero-chevrons {
-    position:absolute; left:40px; top:50%; transform:translateY(-50%);
-    display:flex; flex-direction:column; gap:10px; opacity:.25;
-  }
-  .hero-chevrons span {
-    display:block; width:14px; height:14px;
-    border-left:3px solid var(--teal); border-bottom:3px solid var(--teal);
-    transform:rotate(-45deg);
-  }
-  .hero-inner { position:relative; z-index:2; max-width:820px; }
-  .academy-badge {
-    display:inline-flex; align-items:center; gap:8px;
-    background:var(--teal-dim); border:1px solid var(--card-border);
-    border-radius:50px; padding:6px 20px; margin-bottom:32px;
-    font-size:13px; color:var(--teal); letter-spacing:1px;
-  }
-  .hero h1 { font-size:clamp(28px,5vw,56px); font-weight:300; color:var(--white-soft); margin-bottom:12px; }
-  .name-box {
-    border:2px solid var(--teal);
-    display:inline-block; padding:10px 48px; margin:8px 0 32px;
-  }
-  .name-box .name {
-    display:block; font-size:clamp(44px,8vw,88px);
-    font-weight:900; color:var(--teal); line-height:1;
-    text-shadow:0 0 50px rgba(46,196,182,0.35);
-  }
-  .hero-meta {
-    display:flex; justify-content:center; gap:36px; flex-wrap:wrap;
-    color:var(--white-muted); font-size:14px;
-  }
-  .hero-meta span { display:flex; align-items:center; gap:7px; }
-  .dot { width:6px; height:6px; border-radius:50%; background:var(--teal); flex-shrink:0; }
-  .scroll-hint {
-    position:absolute; bottom:32px; left:50%; transform:translateX(-50%);
-    display:flex; flex-direction:column; align-items:center; gap:6px;
-    color:var(--white-muted); font-size:12px; animation:bob 2s infinite;
-  }
-  .scroll-hint::after { content:''; width:1px; height:36px; background:linear-gradient(var(--teal),transparent); }
-  @keyframes bob { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
- 
-  section { padding:90px 24px; max-width:1100px; margin:0 auto; }
-  .sec-label { display:flex; align-items:center; gap:12px; margin-bottom:14px; }
-  .sec-label .num {
-    font-size:11px; font-weight:700; color:var(--teal); letter-spacing:2px;
-    background:var(--teal-dim); border:1px solid var(--card-border);
-    border-radius:4px; padding:4px 10px; white-space:nowrap;
-  }
-  .sec-label .line { flex:1; height:1px; background:var(--card-border); }
-  h2 { font-size:clamp(24px,4vw,42px); font-weight:800; margin-bottom:44px; line-height:1.25; }
-  .teal { color:var(--teal); }
- 
-  .bio-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
-  .bio-card {
-    background:var(--white-faint); border:1px solid var(--card-border);
-    border-radius:16px; padding:28px 24px; transition:.3s;
-  }
-  .bio-card:hover { background:var(--teal-dim); border-color:var(--teal); transform:translateY(-4px); }
-  .bio-card .icon { font-size:26px; margin-bottom:12px; }
-  .bio-card p { font-size:15px; line-height:1.85; color:var(--white-soft); }
- 
-  .goals-list { display:flex; flex-direction:column; gap:14px; }
-  .goal-item {
-    display:flex; align-items:flex-start; gap:18px;
-    background:var(--white-faint); border:1px solid var(--card-border);
-    border-radius:14px; padding:20px 24px; transition:.3s;
-  }
-  .goal-item:hover { border-color:var(--teal); background:var(--teal-dim); }
-  .goal-num {
-    min-width:40px; height:40px; border-radius:50%;
-    background:var(--teal); color:var(--darkest); font-weight:900; font-size:16px;
-    display:flex; align-items:center; justify-content:center; flex-shrink:0;
-  }
-  .goal-text { font-size:16px; line-height:1.85; color:var(--white-soft); padding-top:6px; }
- 
-  .timeline { position:relative; padding-right:44px; }
-  .timeline::before {
-    content:''; position:absolute; right:0; top:0; bottom:0;
-    width:2px; background:linear-gradient(var(--teal), transparent);
-  }
-  .tl-item { position:relative; margin-bottom:44px; }
-  .tl-dot {
-    position:absolute; right:-51px; top:6px;
-    width:16px; height:16px; border-radius:50%;
-    background:var(--teal); border:3px solid var(--darkest);
-    box-shadow:0 0 0 2px var(--teal);
-  }
-  .tl-month { font-size:11px; font-weight:700; color:var(--teal); letter-spacing:2px; margin-bottom:6px; }
-  .tl-title { font-size:17px; font-weight:700; margin-bottom:6px; }
-  .tl-desc { font-size:14px; color:var(--white-muted); line-height:1.75; }
-  .tl-output {
-    margin-top:10px; display:inline-block;
-    background:var(--teal-dim); border:1px solid var(--card-border);
-    border-radius:6px; padding:4px 12px; font-size:12px; color:var(--teal);
-  }
- 
-  .programs-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:22px; }
-  .prog-card {
-    background:var(--white-faint); border:1px solid var(--card-border);
-    border-radius:20px; padding:32px 28px; position:relative; overflow:hidden; transition:.3s;
-  }
-  .prog-card::before {
-    content:''; position:absolute; top:0; right:0;
-    width:80px; height:80px; background:radial-gradient(circle, rgba(46,196,182,0.18), transparent);
-  }
-  .prog-card:hover { border-color:var(--teal); transform:translateY(-6px); }
-  .prog-num { font-size:52px; font-weight:900; color:rgba(46,196,182,0.08); line-height:1; margin-bottom:10px; }
-  .prog-title { font-size:18px; font-weight:800; color:var(--teal); margin-bottom:10px; }
-  .prog-desc { font-size:14px; color:var(--white-muted); line-height:1.8; margin-bottom:14px; }
-  .prog-impact {
-    font-size:13px; color:var(--white-soft);
-    border-top:1px solid var(--card-border); padding-top:12px;
-    display:flex; align-items:center; gap:8px;
-  }
-  .prog-impact::before { content:'↗'; color:var(--teal); font-size:15px; }
- 
-  .kpi-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:18px; }
-  .kpi-card {
-    background:var(--white-faint); border:1px solid var(--card-border);
-    border-radius:16px; padding:28px 20px; text-align:center; transition:.3s;
-  }
-  .kpi-card:hover { border-color:var(--teal); background:var(--teal-dim); }
-  .kpi-value { font-size:38px; font-weight:900; color:var(--teal); margin-bottom:8px; }
-  .kpi-label { font-size:13px; color:var(--white-muted); line-height:1.65; }
- 
-  .ideas-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-  .idea-item {
-    display:flex; align-items:flex-start; gap:14px;
-    background:var(--white-faint); border:1px solid var(--card-border);
-    border-radius:14px; padding:22px 20px; transition:.3s;
-  }
-  .idea-item:hover { border-color:var(--teal); background:var(--teal-dim); }
-  .idea-icon { font-size:22px; min-width:34px; }
-  .idea-text { font-size:15px; color:var(--white-soft); line-height:1.75; }
- 
-  .impact-wrap {
-    background:linear-gradient(135deg, var(--dark), var(--darker));
-    border:1px solid var(--card-border); border-radius:24px;
-    padding:60px 48px; text-align:center;
-  }
-  .impact-lead { font-size:16px; color:var(--white-muted); max-width:620px; margin:0 auto; line-height:1.9; }
-  .impact-items { display:flex; flex-wrap:wrap; justify-content:center; gap:36px; margin-top:44px; }
-  .impact-item .i-icon { font-size:36px; margin-bottom:10px; }
-  .impact-item p { font-size:14px; color:var(--white-soft); line-height:1.7; max-width:160px; }
- 
-  footer {
-    background:var(--darkest); border-top:1px solid var(--card-border);
-    text-align:center; padding:48px 24px;
-  }
-  .footer-logo { font-size:22px; font-weight:900; color:var(--teal); margin-bottom:6px; }
-  .teal-line { width:56px; height:3px; background:var(--teal); margin:14px auto; border-radius:2px; }
-  .footer-sub { font-size:13px; color:var(--white-muted); margin-bottom:20px; }
-  .footer-note { font-size:12px; color:rgba(255,255,255,0.2); border-top:1px solid var(--card-border); padding-top:18px; margin-top:18px; }
- 
-  @media(max-width:768px) {
-    nav { padding:14px 20px; }
-    .nav-links { display:none; }
-    section { padding:60px 20px; }
-    .bio-grid, .ideas-grid { grid-template-columns:1fr; }
-    .impact-wrap { padding:36px 20px; }
-    .hero-chevrons { display:none; }
-    .timeline { padding-right:28px; }
-    .tl-dot { right:-35px; }
-  }
- 
-  .fade-in { opacity:0; transform:translateY(28px); transition:opacity .65s ease, transform .65s ease; }
-  .fade-in.visible { opacity:1; transform:translateY(0); }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خطة عمل سفير أكاديمية رُوّاد – ليان الغامدي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --dark: #0d3b38;
+      --darker: #082a28;
+      --darkest: #051e1c;
+      --teal: #2ec4b6;
+      --teal-light: #4fd1c5;
+      --teal-dim: rgba(46, 196, 182, 0.12);
+      --white: #ffffff;
+      --white-soft: rgba(255, 255, 255, 0.85);
+      --white-muted: rgba(255, 255, 255, 0.5);
+      --white-faint: rgba(255, 255, 255, 0.06);
+      --card-border: rgba(46, 196, 182, 0.2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: var(--darkest);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      background: rgba(5, 30, 28, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 14px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    .s1 {
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 12px solid var(--teal);
+    }
+
+    .s2 {
+      width: 10px;
+      height: 10px;
+      background: var(--white);
+      transform: rotate(45deg);
+    }
+
+    .s3 {
+      width: 0;
+      height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 12px solid var(--teal);
+    }
+
+    .brand-name {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--white-muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal);
+    }
+
+    .hero {
+      min-height: 100vh;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(46, 196, 182, 0.1) 0%, transparent 70%),
+        linear-gradient(180deg, var(--darker) 0%, var(--darkest) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-dots {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(circle, rgba(46, 196, 182, 0.13) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(ellipse 70% 55% at 50% 0%, black, transparent);
+    }
+
+    .hero-chevrons {
+      position: absolute;
+      left: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      opacity: .25;
+    }
+
+    .hero-chevrons span {
+      display: block;
+      width: 14px;
+      height: 14px;
+      border-left: 3px solid var(--teal);
+      border-bottom: 3px solid var(--teal);
+      transform: rotate(-45deg);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
+    }
+
+    .academy-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--teal-dim);
+      border: 1px solid var(--card-border);
+      border-radius: 50px;
+      padding: 6px 20px;
+      margin-bottom: 32px;
+      font-size: 13px;
+      color: var(--teal);
+      letter-spacing: 1px;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 5vw, 56px);
+      font-weight: 300;
+      color: var(--white-soft);
+      margin-bottom: 12px;
+    }
+
+    .name-box {
+      display: inline-block;
+      padding: 10px 48px;
+      margin: 8px 0 32px;
+    }
+
+    .name-box .name {
+      display: block;
+      font-size: clamp(44px, 8vw, 88px);
+      font-weight: 900;
+      color: var(--teal);
+      line-height: 1;
+      text-shadow: 0 0 50px rgba(46, 196, 182, 0.35);
+    }
+
+    .hero-meta {
+      display: flex;
+      justify-content: center;
+      gap: 36px;
+      flex-wrap: wrap;
+      color: var(--white-muted);
+      font-size: 14px;
+    }
+
+    .hero-meta span {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+      flex-shrink: 0;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: var(--white-muted);
+      font-size: 12px;
+      animation: bob 2s infinite;
+    }
+
+    .scroll-hint::after {
+      content: '';
+      width: 1px;
+      height: 36px;
+      background: linear-gradient(var(--teal), transparent);
+    }
+
+    @keyframes bob {
+
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(0)
+      }
+
+      50% {
+        transform: translateX(-50%) translateY(6px)
+      }
+    }
+
+    section {
+      padding: 90px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .sec-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .sec-label .num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--teal);
+      letter-spacing: 2px;
+      background: var(--teal-dim);
+      border: 1px solid var(--card-border);
+      border-radius: 4px;
+      padding: 4px 10px;
+      white-space: nowrap;
+    }
+
+    .sec-label .line {
+      flex: 1;
+      height: 1px;
+      background: var(--card-border);
+    }
+
+    h2 {
+      font-size: clamp(24px, 4vw, 42px);
+      font-weight: 800;
+      margin-bottom: 44px;
+      line-height: 1.25;
+    }
+
+    .teal {
+      color: var(--teal);
+    }
+
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .bio-card {
+      background: var(--white-faint);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 28px 24px;
+      transition: .3s;
+    }
+
+    .bio-card:hover {
+      background: var(--teal-dim);
+      border-color: var(--teal);
+      transform: translateY(-4px);
+    }
+
+    .bio-card .icon {
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .bio-card p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--white-soft);
+    }
+
+    .goals-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .goal-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      background: var(--white-faint);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 20px 24px;
+      transition: .3s;
+    }
+
+    .goal-item:hover {
+      border-color: var(--teal);
+      background: var(--teal-dim);
+    }
+
+    .goal-num {
+      min-width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: var(--darkest);
+      font-weight: 900;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .goal-text {
+      font-size: 16px;
+      line-height: 1.85;
+      color: var(--white-soft);
+      padding-top: 6px;
+    }
+
+    .timeline {
+      position: relative;
+      padding-right: 44px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(var(--teal), transparent);
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 44px;
+    }
+
+    .tl-dot {
+      position: absolute;
+      right: -51px;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--teal);
+      border: 3px solid var(--darkest);
+      box-shadow: 0 0 0 2px var(--teal);
+    }
+
+    .tl-month {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--teal);
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+
+    .tl-title {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .tl-desc {
+      font-size: 14px;
+      color: var(--white-muted);
+      line-height: 1.75;
+    }
+
+    .tl-output {
+      margin-top: 10px;
+      display: inline-block;
+      background: var(--teal-dim);
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      padding: 4px 12px;
+      font-size: 12px;
+      color: var(--teal);
+    }
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 22px;
+    }
+
+    .prog-card {
+      background: var(--white-faint);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+      transition: .3s;
+    }
+
+    .prog-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, rgba(46, 196, 182, 0.18), transparent);
+    }
+
+    .prog-card:hover {
+      border-color: var(--teal);
+      transform: translateY(-6px);
+    }
+
+    .prog-num {
+      font-size: 52px;
+      font-weight: 900;
+      color: rgba(46, 196, 182, 0.08);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .prog-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--teal);
+      margin-bottom: 10px;
+    }
+
+    .prog-desc {
+      font-size: 14px;
+      color: var(--white-muted);
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    .prog-impact {
+      font-size: 13px;
+      color: var(--white-soft);
+      border-top: 1px solid var(--card-border);
+      padding-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .prog-impact::before {
+      content: '↗';
+      color: var(--teal);
+      font-size: 15px;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 18px;
+    }
+
+    .kpi-card {
+      background: var(--white-faint);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 28px 20px;
+      text-align: center;
+      transition: .3s;
+    }
+
+    .kpi-card:hover {
+      border-color: var(--teal);
+      background: var(--teal-dim);
+    }
+
+    .kpi-value {
+      font-size: 38px;
+      font-weight: 900;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+
+    .kpi-label {
+      font-size: 13px;
+      color: var(--white-muted);
+      line-height: 1.65;
+    }
+
+    .ideas-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .idea-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--white-faint);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 22px 20px;
+      transition: .3s;
+    }
+
+    .idea-item:hover {
+      border-color: var(--teal);
+      background: var(--teal-dim);
+    }
+
+    .idea-icon {
+      font-size: 22px;
+      min-width: 34px;
+    }
+
+    .idea-text {
+      font-size: 15px;
+      color: var(--white-soft);
+      line-height: 1.75;
+    }
+
+    .impact-wrap {
+      background: linear-gradient(135deg, var(--dark), var(--darker));
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 60px 48px;
+      text-align: center;
+    }
+
+    .impact-lead {
+      font-size: 16px;
+      color: var(--white-muted);
+      max-width: 620px;
+      margin: 0 auto;
+      line-height: 1.9;
+    }
+
+    .impact-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 36px;
+      margin-top: 44px;
+    }
+
+    .impact-item .i-icon {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .impact-item p {
+      font-size: 14px;
+      color: var(--white-soft);
+      line-height: 1.7;
+      max-width: 160px;
+    }
+
+    footer {
+      background: var(--darkest);
+      border-top: 1px solid var(--card-border);
+      text-align: center;
+      padding: 48px 24px;
+    }
+
+    .footer-logo {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--teal);
+      margin-bottom: 6px;
+    }
+
+    .teal-line {
+      width: 56px;
+      height: 3px;
+      background: var(--teal);
+      margin: 14px auto;
+      border-radius: 2px;
+    }
+
+    .footer-sub {
+      font-size: 13px;
+      color: var(--white-muted);
+      margin-bottom: 20px;
+    }
+
+    .footer-note {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.2);
+      border-top: 1px solid var(--card-border);
+      padding-top: 18px;
+      margin-top: 18px;
+    }
+
+    @media(max-width:768px) {
+      nav {
+        padding: 14px 20px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      section {
+        padding: 60px 20px;
+      }
+
+      .bio-grid,
+      .ideas-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .impact-wrap {
+        padding: 36px 20px;
+      }
+
+      .hero-chevrons {
+        display: none;
+      }
+
+      .timeline {
+        padding-right: 28px;
+      }
+
+      .tl-dot {
+        right: -35px;
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
+
 <body>
-
-    <nav>
-        <div class="nav-brand">
-            <img src="image-removebg-preview.png" alt="أكاديمية رُوّاد" class="nav-logo-img">
-        </div>
-        <ul class="nav-links">
-            <li><a href="#bio">نبذة</a></li>
-            <li><a href="#goals">الأهداف</a></li>
-            <li><a href="#timeline">الجدول</a></li>
-            <li><a href="#programs">البرامج</a></li>
-            <li><a href="#kpis">المؤشرات</a></li>
-        </ul>
-    </nav>
-
+ 
+<nav>
+  <div class="nav-brand">
+    <div class="brand-icon">
+      <div class="s1"></div><div class="s2"></div><div class="s3"></div>
+    </div>
+    <span class="brand-name">أكاديمية رُوّاد</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#bio">نبذة</a></li>
+    <li><a href="#goals">الأهداف</a></li>
+    <li><a href="#timeline">الجدول</a></li>
+    <li><a href="#programs">البرامج</a></li>
+    <li><a href="#kpis">المؤشرات</a></li>
+    <li><a href="#impact">الأثر</a></li>
+  </ul>
+</nav>
+ 
 <div class="hero">
   <div class="hero-dots"></div>
   <div class="hero-chevrons"><span></span><span></span><span></span></div>
   <div class="hero-inner">
-    <h1>خطة السفير</h1>
+    <h1>خطة عمل سفير</h1>
     <div class="name-box"><span class="name">ليان الغامدي</span></div>
     <div class="hero-meta">
-      <span><span class="dot"></span> مدة الخطة: ٦ أشهر</span>
       <span><span class="dot"></span> الذكاء الاصطناعي وعلوم البيانات</span>
-      <span><span class="dot"></span> رؤية 2030</span>
+      <span><span class="dot"></span>تحليل البيانات</span>
     </div>
   </div>
-  <div class="scroll-hint">تصفّح</div>
+  <div class="scroll-hint">
+    <span style="font-size: 16px; font-weight: 600;">تصفّح</span>
+  </div>
 </div>
  
+<section id="bio" class="fade-in">
+  <div class="sec-label"><span class="num">أولاً</span><div class="line"></div></div>
+  <h2>نبذة عن <span class="teal">السفير</span></h2>
+  <div class="bio-grid">
+    <div class="bio-card">
+      <div class="icon">🎓</div>
+      <p>علوم حاسبات من جامعة الملك عبدالعزيز </p>
+     <p> باحثة ومتخصصة في الذكاء الاصطناعي وتعلم الآلة وتحليل البيانات<p>
+    </div>
+    <div class="bio-card">
+      <div class="icon">📜</div>
+      <p>مدرب مهني معتمد من المؤسسة العامة للتدريب التقني والمهني</p>
+    </div>
+    <div class="bio-card">
+      <div class="icon">📊</div>
+      <p>عضو الجمعية المهنية للإحصائيين وعلماء البيانات </p>
+      <p>عضو جمعية إدارة وحوكمة البيانات</p>
 
-    <section id="bio" class="fade-in">
-        <div class="sec-label"><span class="num">أولاً</span><div class="line"></div></div>
-        <h2>نبذة عن <span class="teal">السفير</span></h2>
-        <div class="bio-grid">
-            <div class="bio-card">
-                <div class="icon">🎓</div>
-                <p>علوم حاسبات من جامعة الملك عبدالعزيز</p>
-                <p> باحثة ومتخصصة في الذكاء الاصطناعي وتعلم الآلة وتحليل البيانات </p>
-            </div>
-            <div class="bio-card">
-                <div class="icon">📜</div>
-                <p>مدرب مهني معتمد من المؤسسة العامة للتدريب التقني والمهني</p>
-            </div>
-            <div class="bio-card">
-                <div class="icon">📊</div>
-                <p>عضو الجمعية المهنية للإحصائيين وعلماء البيانات — عضو جمعية إدارة وحوكمة البيانات</p>
-            </div>
-            <div class="bio-card">
-                <div class="icon">🔬</div>
-                <p>مهتمة بتطوير أدوات ومشاريع في التشخيص الطبي وتوظيف البيانات لخدمة المجتمع وتعزيز الابتكار</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="goals" class="fade-in">
-        <div class="sec-label"><span class="num">ثانياً</span><div class="line"></div></div>
-        <h2>أهداف <span class="teal">الخطة</span></h2>
-        <div class="goals-list">
-            <div class="goal-item"><div class="goal-num">١</div><div class="goal-text">تمكين الطلاب من فهم أساسيات الذكاء الاصطناعي وعلوم البيانات</div></div>
-            <div class="goal-item"><div class="goal-num">٢</div><div class="goal-text">تعزيز الوعي المهني بالمسارات المستقبلية في المجالات التقنية</div></div>
-            <div class="goal-item"><div class="goal-num">٣</div><div class="goal-text">تنمية المهارات العملية من خلال ورش العمل والمشاريع التطبيقية</div></div>
-            <div class="goal-item"><div class="goal-num">٤</div><div class="goal-text">بناء مجتمع تعلم يدعم الابتكار والتفكير الإبداعي</div></div>
-            <div class="goal-item"><div class="goal-num">٥</div><div class="goal-text">ربط الطلاب بسوق العمل من خلال الإرشاد والتوجيه المهني</div></div>
-        </div>
-    </section>
-
-    <section id="timeline" class="fade-in">
-        <div class="sec-label"><span class="num">ثالثاً</span><div class="line"></div></div>
-        <h2>الجدول الزمني <span class="teal">٦ أشهر</span></h2>
-        <div class="timeline">
-            <div class="tl-item">
-                <div class="tl-dot"></div>
-                <div class="tl-month">الشهر الأول</div>
-                <div class="tl-title">لقاء تعريفي + ورشة "مقدمة في الذكاء الاصطناعي"</div>
-                <div class="tl-output">رفع الوعي وبناء المجتمع</div>
-            </div>
-            <div class="tl-item">
-                <div class="tl-dot"></div>
-                <div class="tl-month">الشهر الثاني</div>
-                <div class="tl-title">ورشة "أساسيات تحليل البيانات" + جلسة إرشاد مهني</div>
-                <div class="tl-output">اكتساب مهارات تحليل البيانات</div>
-            </div>
-            <div class="tl-item">
-                <div class="tl-dot"></div>
-                <div class="tl-month">الشهر الثالث</div>
-                <div class="tl-title">إطلاق تحدي طلابي — Mini Hackathon</div>
-                <div class="tl-output">مشاريع طلابية مبتكرة</div>
-            </div>
-            <div class="tl-item">
-                <div class="tl-dot"></div>
-                <div class="tl-month">الشهر الرابع</div>
-                <div class="tl-title">ورشة "تطبيقات AI في الصحة والتعليم"</div>
-                <div class="tl-output">ربط المعرفة بالتطبيق الواقعي</div>
-            </div>
-            <div class="tl-item">
-                <div class="tl-dot"></div>
-                <div class="tl-month">الشهر الخامس</div>
-                <div class="tl-title">برنامج إرشاد مهني فردي + مراجعة السير الذاتية</div>
-                <div class="tl-output">تحسين الجاهزية لسوق العمل</div>
-            </div>
-            <div class="tl-item">
-                <div class="tl-dot"></div>
-                <div class="tl-month">الشهر السادس</div>
-                <div class="tl-title">معرض ختامي لعرض المشاريع + تقييم البرنامج</div>
-                <div class="tl-output">قياس الأثر والاستدامة</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="programs" class="fade-in">
-        <div class="sec-label"><span class="num">رابعاً</span><div class="line"></div></div>
-        <h2>المبادرات <span class="teal">المقترحة</span></h2>
-        <div class="programs-grid">
-            <div class="prog-card">
-                <div class="prog-num">01</div>
-                <div class="prog-title">رواد الذكاء الاصطناعي</div>
-                <p class="prog-desc">سلسلة ورش تدريبية تغطي أساسيات الذكاء الاصطناعي وتعلم الآلة لطلاب الجامعات.</p>
-            </div>
-            <div class="prog-card">
-                <div class="prog-num">02</div>
-                <div class="prog-title">بياناتك مستقبلك</div>
-                <p class="prog-desc">تدريب عملي على تحليل البيانات باستخدام Python وPower BI لبناء قرارات ذكية.</p>
-            </div>
-            <div class="prog-card">
-                <div class="prog-num">03</div>
-                <div class="prog-title">مرشدي المهني</div>
-                <p class="prog-desc">جلسات إرشاد فردية وجماعية لمساعدة الطلاب في التخطيط لمسارهم المهني بثقة.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="kpis" class="fade-in">
-        <div class="sec-label"><span class="num">خامساً</span><div class="line"></div></div>
-        <h2>مؤشرات <span class="teal">الأداء</span></h2>
-        <div class="kpi-grid">
-            <div class="kpi-card"><div class="kpi-value">6</div><div class="kpi-label">ورش تدريبية</div></div>
-            <div class="kpi-card"><div class="kpi-value">300</div><div class="kpi-label">مستفيد كحد أقصى</div></div>
-            <div class="kpi-card"><div class="kpi-value">12</div><div class="kpi-label">مشروع تطبيقي</div></div>
-            <div class="kpi-card"><div class="kpi-value">90%</div><div class="kpi-label">مستوى الرضا</div></div>
-        </div>
-    </section>
-
-    <section id="impact" class="fade-in">
-        <div class="sec-label"><span class="num">سادساً</span><div class="line"></div></div>
-        <h2>الأثر <span class="teal">المتوقع</span></h2>
-        <div class="impact-wrap">
-            <p class="impact-lead">استثمار الخبرات العلمية والمهنية لإحداث أثر مستدام يتماشى مع مستهدفات <strong class="teal">رؤية المملكة 2030</strong>.</p>
-            <div class="impact-items">
-                <div class="impact-item"><div style="font-size:30px">📡</div><p>رفع الوعي التقني</p></div>
-                <div class="impact-item"><div style="font-size:30px">⚙️</div><p>تمكين المهارات</p></div>
-                <div class="impact-item"><div style="font-size:30px">💼</div><p>الجاهزية للعمل</p></div>
-                <div class="impact-item"><div style="font-size:30px">🏆</div><p>ترسيخ الريادة</p></div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-logo">أكاديمية رُوّاد</div>
-        <div class="teal-line"></div>
-        <div style="font-size: 14px; opacity: 0.7;">خطة عمل السفير · ليان الغامدي · ٢٠٢٦</div>
-        <div style="font-size: 11px; opacity: 0.4; margin-top: 20px;">© جميع الحقوق محفوظة لأكاديمية رواد</div>
-    </footer>
-
-    <script>
-        const obs = new IntersectionObserver(entries => {
-            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-    </script>
+    </div>
+    <div class="bio-card">
+      <div class="icon">🔬</div>
+      <p>مهتمة بتطوير أدوات ومشاريع في التشخيص الطبي ودعم اتخاذ القرار وتوظيف البيانات لخدمة المجتمع</p>
+    </div>
+  </div>
+</section>
+ 
+<section id="goals" class="fade-in">
+  <div class="sec-label"><span class="num">ثانياً</span><div class="line"></div></div>
+  <h2>أهداف <span class="teal">الخطة</span></h2>
+  <div class="goals-list">
+    <div class="goal-item"><div class="goal-num">١</div><div class="goal-text">تمكين الطلاب من فهم أساسيات الذكاء الاصطناعي وعلوم البيانات</div></div>
+    <div class="goal-item"><div class="goal-num">٢</div><div class="goal-text">تعزيز الوعي المهني بالمسارات المستقبلية في المجالات التقنية</div></div>
+    <div class="goal-item"><div class="goal-num">٣</div><div class="goal-text">تنمية المهارات العملية من خلال ورش العمل والمشاريع التطبيقية</div></div>
+    <div class="goal-item"><div class="goal-num">٤</div><div class="goal-text">بناء مجتمع تعلم يدعم الابتكار والتفكير الإبداعي</div></div>
+    <div class="goal-item"><div class="goal-num">٥</div><div class="goal-text">ربط الطلاب بسوق العمل من خلال الإرشاد والتوجيه المهني</div></div>
+  </div>
+</section>
+ 
+<section id="timeline" class="fade-in">
+  <div class="sec-label"><span class="num">خامساً</span><div class="line"></div></div>
+  <h2>الجدول الزمني <span class="teal">٦ أشهر</span></h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-month">الشهر الأول</div>
+      <div class="tl-title">لقاء تعريفي + ورشة "مقدمة في الذكاء الاصطناعي"</div>
+      <div class="tl-desc">بناء قاعدة مستفيدين وتعريفهم بمجالات الذكاء الاصطناعي الحديثة</div>
+      <div class="tl-output">رفع الوعي وبناء المجتمع</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-month">الشهر الثاني</div>
+      <div class="tl-title">ورشة "أساسيات تحليل البيانات" + جلسة إرشاد مهني</div>
+      <div class="tl-desc">اكتساب مهارات تحليل البيانات ودعم التوجيه الوظيفي</div>
+      <div class="tl-output">مهارات تحليل البيانات</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-month">الشهر الثالث</div>
+      <div class="tl-title">إطلاق تحدي طلابي — Mini Hackathon</div>
+      <div class="tl-desc">تحدٍّ تنافسي لتطوير حلول تقنية مبتكرة في فريق</div>
+      <div class="tl-output">مشاريع طلابية مبتكرة</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-month">الشهر الرابع</div>
+      <div class="tl-title">ورشة "تطبيقات الذكاء الاصطناعي في الصحة والتعليم"</div>
+      <div class="tl-desc">ربط المعرفة النظرية بتطبيقات حقيقية في القطاعات الحيوية</div>
+      <div class="tl-output">تطبيق عملي واقعي</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-month">الشهر الخامس</div>
+      <div class="tl-title">برنامج إرشاد مهني فردي + مراجعة السير الذاتية</div>
+      <div class="tl-desc">جلسات شخصية لتحسين جاهزية الطلاب لسوق العمل</div>
+      <div class="tl-output">جاهزية سوق العمل</div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-dot"></div>
+      <div class="tl-month">الشهر السادس</div>
+      <div class="tl-title">معرض ختامي لعرض المشاريع + تقييم البرنامج</div>
+      <div class="tl-desc">احتفاء بمخرجات البرنامج وقياس الأثر واستدامة المبادرات</div>
+      <div class="tl-output">قياس الأثر والاستدامة</div>
+    </div>
+  </div>
+</section>
+ 
+<section id="programs" class="fade-in">
+  <div class="sec-label"><span class="num">سادساً</span><div class="line"></div></div>
+  <h2>البرامج والمبادرات <span class="teal">المقترحة</span></h2>
+  <div class="programs-grid">
+    <div class="prog-card">
+      <div class="prog-num">01</div>
+      <div class="prog-title">رواد الذكاء الاصطناعي</div>
+      <div class="prog-desc">سلسلة ورش تدريبية تغطي أساسيات الذكاء الاصطناعي وتعلم الآلة — لطلاب الجامعات والثانوية</div>
+      <div class="prog-impact">مشاريع تطبيقية وشهادات مشاركة</div>
+    </div>
+    <div class="prog-card">
+      <div class="prog-num">02</div>
+      <div class="prog-title">بياناتك مستقبلك</div>
+      <div class="prog-desc">تدريب عملي على تحليل البيانات باستخدام Python وPower BI لبناء قرارات مبنية على البيانات</div>
+      <div class="prog-impact">تمكين الطلاب من التحليل الذاتي</div>
+    </div>
+    <div class="prog-card">
+      <div class="prog-num">03</div>
+      <div class="prog-title">ابتكر بالذكاء الاصطناعي</div>
+      <div class="prog-desc">مسابقة لتطوير حلول تقنية تعزز الابتكار والعمل الجماعي</div>
+      <div class="prog-impact">حلول مجتمعية مبتكرة</div>
+    </div>
+    <div class="prog-card">
+      <div class="prog-num">04</div>
+      <div class="prog-title">مرشدي المهني</div>
+      <div class="prog-desc">جلسات إرشاد فردية وجماعية لمساعدة الطلاب في التخطيط لمسارهم المهني بثقة</div>
+      <div class="prog-impact">زيادة وعي الطلاب بالفرص</div>
+    </div>
+    <div class="prog-card">
+      <div class="prog-num">05</div>
+      <div class="prog-title">منصة محتوى رقمي</div>
+      <div class="prog-desc">نشر مقالات وفيديوهات قصيرة حول مفاهيم الذكاء الاصطناعي لتوسيع نطاق الاستفادة</div>
+      <div class="prog-impact">وصول خارج حدود الفعاليات</div>
+    </div>
+  </div>
+  
+</section>
+ 
+<section id="kpis" class="fade-in">
+  <div class="sec-label"><span class="num">سابعاً</span><div class="line"></div></div>
+  <h2>مؤشرات قياس <span class="teal">الأداء</span></h2>
+  <div class="kpi-grid">
+    <div class="kpi-card"><div class="kpi-value">6</div><div class="kpi-label">ورش تدريبية خلال ٦ أشهر</div></div>
+    <div class="kpi-card"><div class="kpi-value">300</div><div class="kpi-label">طالب مستفيد كحد أقصى</div></div>
+    <div class="kpi-card"><div class="kpi-value">12</div><div class="kpi-label">مشروع طلابي تطبيقي</div></div>
+    <div class="kpi-card"><div class="kpi-value">90%</div><div class="kpi-label">مستوى رضا المشاركين</div></div>
+</div>
+</section>
+ 
+<section id="ideas" class="fade-in">
+  <div class="sec-label"><span class="num">ثامناً</span><div class="line"></div></div>
+  <h2>أفكار تطويرية <span class="teal">للأكاديمية</span></h2>
+  <div class="ideas-grid">
+    <div class="idea-item"><div class="idea-icon">🤖</div><div class="idea-text">إنشاء نادي للذكاء الاصطناعي داخل الأكاديمية</div></div>
+     <div class="idea-item"><div class="idea-icon">🏥</div><div class="idea-text">إدماج مشاريع مجتمعية تُوظّف الذكاء الاصطناعي لخدمة المجتمع</div></div>
+     <div class="idea-item"><div class="idea-icon">💻</div><div class="idea-text">إطلاق منصة تعليم إلكتروني تقدم محتوى تدريبي مستدام</div></div>
+    <div class="idea-item"><div class="idea-icon">🌐</div><div class="idea-text">بناء شبكة خريجين لدعم الطلاب الجدد</div></div>
+    <div class="idea-item"><div class="idea-icon">🤝</div><div class="idea-text">توفير فرص تدريب تعاوني مع القطاعين العام والخاص</div></div>
+     </div>
+</section>
+ 
+<section id="impact" class="fade-in">
+  <div class="sec-label"><span class="num">عاشراً</span><div class="line"></div></div>
+  <h2>الأثر <span class="teal">المتوقع</span></h2>
+  <div class="impact-wrap">
+    <p class="impact-lead">
+      تسهم هذه الخطة في استثمار الخبرات العلمية والمهنية لإحداث أثر مستدام في طلاب الأكاديمية، بما يتماشى مع مستهدفات <strong style="color:var(--teal)">رؤية المملكة 2030</strong> في بناء مجتمع معرفي واقتصاد رقمي مزدهر.
+    </p>
+    <div class="impact-items">
+      <div class="impact-item"><div class="i-icon">📡</div><p>رفع الوعي التقني لدى الطلاب</p></div>
+      <div class="impact-item"><div class="i-icon">⚙️</div><p>تمكين بمهارات الذكاء الاصطناعي وعلوم البيانات</p></div>
+      <div class="impact-item"><div class="i-icon">💼</div><p>تعزيز الجاهزية لسوق العمل</p></div>
+      <div class="impact-item"><div class="i-icon">💡</div><p>دعم الابتكار والمبادرات المجتمعية</p></div>
+      <div class="impact-item"><div class="i-icon">🏆</div><p>ترسيخ مكانة أكاديمية رواد كمركز رائد</p></div>
+    </div>
+  </div>
+</section>
+ 
+<footer>
+  <div class="footer-logo"> رُوّاد اليوم هم قادة الغد </div>
+  <div class="teal-line"></div>
+  <div class="footer-sub"> ليان الغامدي</div>
+  <div class="footer-note">© 2026 أكاديمية رواد · جميع الحقوق محفوظة</div>
+</footer>
+ 
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
 </body>
 </html>
